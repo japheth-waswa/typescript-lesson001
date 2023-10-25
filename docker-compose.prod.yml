@@ -1,0 +1,7 @@
+version: "3.8"
+
+services:
+  ts-lesson001:
+    build:
+      target: production
+    entrypoint: ["npm", "start"]

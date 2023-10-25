@@ -1,0 +1,19 @@
+version: "3.8"
+
+services:
+  ts-lesson001:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: base
+    image: japhethwaswa/ts-lesson001:1
+    expose:
+      - 7747
+    ports:
+      - 7747:7747
+    environment:
+      - APP_PORT=7747
+    restart: always
+    entrypoint: ["npm", "run", "dev"]
+    volumes:
+      - ./:/app
